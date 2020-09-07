@@ -50,7 +50,7 @@ def user_exist(username,password):
 
 def main():
 	print(' ')
-	print('Hello! Welcome to Password Locker.')
+	print('Welcome to Password Locker.')
 	while True:
 		print(' ')
 		print("-"*60)

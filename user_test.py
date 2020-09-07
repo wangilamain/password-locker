@@ -13,7 +13,7 @@ class TestUser(unittest.TestCase):
         set up method to run before each test cases.
         """
         #
-        self.new_user = User("facebook","biron odhiambo","biron 4745") # Create user object
+        self.new_user = User("facebook","sharon wawira","wangila1998wawira") # Create user object
 
     def tearDown(self):
         '''
@@ -27,8 +27,8 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
         self.assertEqual(self.new_user.account_name,"facebook")
-        self.assertEqual(self.new_user.login_username,"biron odhiambo")
-        self.assertEqual(self.new_user.user_password,"biron 4745")
+        self.assertEqual(self.new_user.login_username,"sharon wawira")
+        self.assertEqual(self.new_user.user_password,"wangila1998wawira")
 
 
     def test_save_user(self):
@@ -45,7 +45,7 @@ class TestUser(unittest.TestCase):
         objects to our user_list
         '''
         self.new_user.save_user()
-        test_user = User("Instagram","biron_odhiambo","biron4745")
+        test_user = User("Instagram","sharon_wawira","wangila1998wawira")
 
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
@@ -56,7 +56,7 @@ class TestUser(unittest.TestCase):
         test_delete_user to test if we can remove a user from our user list
         '''
         self.new_user.save_user()
-        test_user = User("snapchat","bironotis","biron") # new user
+        test_user = User("snapchat","sharonwera","sharon") # new user
         test_user.save_user()
 
         self.new_user.delete_user() # Deleting a user object
@@ -67,7 +67,7 @@ class TestUser(unittest.TestCase):
         test to check if we can find user by account name and display information
         '''
         self.new_user.save_user()
-        test_user = User("facebook","biron odhiambo","biron 4745")
+        test_user = User("facebook","sharon wawira","wangila1998wawira")
         test_user.save_user()
         found_user = User.find_by_account_name("facebook")
         self.assertEqual(found_user.account_name,test_user.account_name)
@@ -77,10 +77,10 @@ class TestUser(unittest.TestCase):
         test to check if we can return a Boolean if we cannot find the user.
         '''
         self.new_user.save_user()
-        test_user = User("facebook","biron odhiambo","biron 4745") # new user
+        test_user = User("facebook","sharon wawira","wangila1998wawira") # new user
         test_user.save_user()
 
-        user_exists = User.user_exist("biron odhiambo")
+        user_exists = User.user_exist("sharon wawira")
         self.assertTrue(user_exists)
 
     def test_display_all_users(self):
