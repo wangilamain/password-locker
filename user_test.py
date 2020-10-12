@@ -13,7 +13,7 @@ class TestUser(unittest.TestCase):
         set up method to run before each test cases.
         """
         #
-        self.new_user = User("facebook","sharon wawira","wangila1998wawira") # Create user object
+        self.new_user = User("Facebook","sharon wawira","wangila1998wawira") # Create user object
 
     def tearDown(self):
         '''
@@ -21,12 +21,11 @@ class TestUser(unittest.TestCase):
         '''
         User.user_list = []
 
-
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
-        self.assertEqual(self.new_user.account_name,"facebook")
+        self.assertEqual(self.new_user.account_name,"Facebook")
         self.assertEqual(self.new_user.login_username,"sharon wawira")
         self.assertEqual(self.new_user.user_password,"wangila1998wawira")
 
@@ -45,7 +44,7 @@ class TestUser(unittest.TestCase):
         objects to our user_list
         '''
         self.new_user.save_user()
-        test_user = User("Instagram","sharon_wawira","wangila1998wawira")
+        test_user = User("Instagram","shrn_wawira","wangila1998wawira")
 
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
@@ -88,11 +87,6 @@ class TestUser(unittest.TestCase):
         method that returns a list of all users saved
         '''
         self.assertEqual(User.display_users(),User.user_list)
-
-        
-
-
-
 
 if __name__=='__main__':
     unittest.main()
