@@ -54,7 +54,7 @@ def main():
 	while True:
 		print(' ')
 		print("-"*60)
-		print('Use these codes to navigate: \n ca-Create an Account \n li-Log In \n ex-Exit')
+		print('Use these codes to navigate: \n Cr-Create an Account \n li-Log In \n ex-Exit')
 		short_code = input('Enter a choice: ').lower().strip()
 		if short_code == 'ex':
 			break
@@ -122,7 +122,7 @@ def main():
 							print(' ')	
 						else:
 							print(' ')
-							print("You don't seem to have any user credentials saved yet")
+							print("You don't seem to have any accounts yet,please create one")
 							print(' ')
 					
 					else:
@@ -136,12 +136,6 @@ def main():
 			print("-"*60)
 			print(' ')
 			print('Oops! Wrong option entered. Try again.')
-				
-
-
-
-
-
 
 if __name__ == '__main__':
 	main()
