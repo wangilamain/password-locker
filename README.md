@@ -6,7 +6,7 @@
 
 <h2>Behaviour Driven Development(BDD)</h2>
 <p>
-1 Input : Enter your account details if you have an account or create new account 2 Output: Able to see credentials of you have account of requested to input new details for your credentials</p>
+1 Input : Enter your account details if you have an account or create new account 2 Output: Able to see credentials if you have account of requested to input new details for your credentials</p>
 
 <h2>Installation</h2>
 <p>To view the website .Step 1 : Clone this repo : git clone (https://github.com/wangilamain/password-locker). .
