@@ -6,7 +6,6 @@ class User:
     Class that generate new instance of user.
     """
     user_list = [] #Empty user list
-
     def __init__(self, account_name, login_username, user_password):
         '''
         Initializing the variables
@@ -40,7 +39,6 @@ class User:
         for user in cls.user_list:
             if user.account_name == account_name:
                 return user
-
 
     @classmethod
     def user_exist(cls,login_username):
